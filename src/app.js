@@ -1,13 +1,17 @@
+import dotenv from 'dotenv';
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import helmet from "helmet";
-import { NODE_ENV } from "./config.js";
+
+dotenv.config();
 
 const app = express();
 const port = 3000;
 
-const morganOption = NODE_ENV === "production" ? "tiny" : "common";
+const morganOption = process.env.NODE_ENV === "production" 
+    ? "tiny" 
+    : "common";
 
 app.use(morgan(morganOption));
 app.use(cors());
