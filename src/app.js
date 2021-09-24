@@ -1,7 +1,10 @@
+import dotenv from 'dotenv';
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import helmet from "helmet";
+
+dotenv.config();
 
 const app = express();
 
