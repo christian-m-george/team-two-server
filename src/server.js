@@ -3,9 +3,11 @@ import app from './app.js';
 import userRouter from './user/userRouter.js';
 import authRouter from './auth/authRouter.js';
 import surveyRouter from './survey/surveyRouter.js';
-import config from './config.js'
+import pg from 'pg';
+import config from './config.js';
 
 dotenv.config();
+const pg = pg.
 
 app.get("/", (req, res) => {
     res.send("hello, world!");
